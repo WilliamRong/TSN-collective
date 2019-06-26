@@ -1,0 +1,522 @@
+/usr/bin/python2.7 /media/a5/image3/rw/models/tsn-pytorch-collective/main.py cad RGB ./cad_split_with_pose/cad_rgb_train_split_2.txt ./cad_split_with_pose/cad_rgb_val_split_2.txt --arch BNInception --num_segments 3 --gd 20 --lr 0.0001 --lr_steps 30 60 --epochs 80 -b 128 -j 3 --dropout 0.8 --snapshot_pref cad_bninception_bs128_split_2
+
+Initializing TSN with base model: BNInception.
+TSN Configurations:
+    input_modality:     RGB
+    num_segments:       3
+    new_length:         1
+    consensus_module:   avg
+    dropout_ratio:      0.8
+        
+/usr/local/lib/python2.7/dist-packages/torch/nn/modules/module.py:514: UserWarning: src is not broadcastable to dst, but they have the same number of elements.  Falling back to deprecated pointwise behavior.
+  own_state[name].copy_(param)
+/usr/local/lib/python2.7/dist-packages/torchvision/transforms/transforms.py:188: UserWarning: The use of the transforms.Scale transform is deprecated, please use transforms.Resize instead.
+  "please use transforms.Resize instead.")
+group: first_conv_weight has 1 params, lr_mult: 1, decay_mult: 1
+group: first_conv_bias has 1 params, lr_mult: 2, decay_mult: 0
+group: normal_weight has 69 params, lr_mult: 1, decay_mult: 1
+group: normal_bias has 69 params, lr_mult: 2, decay_mult: 0
+group: BN scale/shift has 2 params, lr_mult: 1, decay_mult: 0
+Freezing BatchNorm2D except the first one.
+Epoch: [0][0/16], lr: 0.00010	Time 14.404 (14.404)	Data 1.866 (1.866)	Loss 2.0865 (2.0865)	Prec@1 10.156 (10.156)	Prec@5 60.938 (60.938)
+clipping gradient: 26.1504042443 with coef 0.764806532746
+clipping gradient: 21.6204680712 with coef 0.925049352961
+clipping gradient: 20.7257335957 with coef 0.964983936883
+clipping gradient: 30.2428397092 with coef 0.661313560244
+clipping gradient: 34.3109145859 with coef 0.582904893134
+clipping gradient: 22.6968007822 with coef 0.88118145777
+Epoch: [0][10/16], lr: 0.00010	Time 0.539 (1.923)	Data 0.000 (0.170)	Loss 1.3410 (1.7661)	Prec@1 47.656 (34.020)	Prec@5 92.188 (81.463)
+clipping gradient: 41.8445767891 with coef 0.477959189331
+clipping gradient: 28.7435581184 with coef 0.695808080461
+clipping gradient: 44.5823841097 with coef 0.448607682146
+clipping gradient: 31.49021052 with coef 0.635118015083
+clipping gradient: 31.5358261394 with coef 0.634199336069
+Freezing BatchNorm2D except the first one.
+clipping gradient: 42.6758376219 with coef 0.468649266529
+Epoch: [1][0/16], lr: 0.00010	Time 3.560 (3.560)	Data 2.232 (2.232)	Loss 1.3099 (1.3099)	Prec@1 51.562 (51.562)	Prec@5 91.406 (91.406)
+clipping gradient: 43.7934777149 with coef 0.456689010409
+clipping gradient: 48.0443702976 with coef 0.416281863538
+clipping gradient: 33.4174634579 with coef 0.598489470189
+clipping gradient: 75.3229767487 with coef 0.265523228944
+clipping gradient: 88.0663419507 with coef 0.227101518662
+clipping gradient: 38.5538450078 with coef 0.518755003449
+clipping gradient: 24.4602826013 with coef 0.817652041311
+clipping gradient: 30.2348682158 with coef 0.661487917104
+clipping gradient: 39.1587147623 with coef 0.510741992464
+clipping gradient: 32.0015660558 with coef 0.62496941447
+Epoch: [1][10/16], lr: 0.00010	Time 0.537 (0.880)	Data 0.000 (0.203)	Loss 0.9762 (1.0635)	Prec@1 62.500 (59.233)	Prec@5 96.094 (96.307)
+clipping gradient: 43.3526966231 with coef 0.461332317431
+clipping gradient: 42.6391700062 with coef 0.469052282141
+clipping gradient: 39.9759120533 with coef 0.500301280764
+clipping gradient: 30.6288459254 with coef 0.652979222551
+clipping gradient: 29.2142930131 with coef 0.68459640598
+Freezing BatchNorm2D except the first one.
+clipping gradient: 34.4834116196 with coef 0.579989016766
+Epoch: [2][0/16], lr: 0.00010	Time 2.734 (2.734)	Data 2.192 (2.192)	Loss 0.8264 (0.8264)	Prec@1 70.312 (70.312)	Prec@5 96.875 (96.875)
+clipping gradient: 31.763705635 with coef 0.629649456831
+clipping gradient: 47.6469634437 with coef 0.419753926683
+clipping gradient: 56.0745667135 with coef 0.356667936503
+clipping gradient: 46.2481234067 with coef 0.432449979086
+clipping gradient: 37.7266318639 with coef 0.530129487099
+clipping gradient: 47.648608276 with coef 0.419739436757
+clipping gradient: 30.9654932793 with coef 0.645880232542
+clipping gradient: 25.408232374 with coef 0.787146453386
+clipping gradient: 30.73469032 with coef 0.650730487008
+clipping gradient: 25.7751682378 with coef 0.775940619105
+Epoch: [2][10/16], lr: 0.00010	Time 0.528 (0.743)	Data 0.000 (0.209)	Loss 0.7615 (0.8754)	Prec@1 68.750 (68.253)	Prec@5 98.438 (97.656)
+clipping gradient: 28.0253549234 with coef 0.713639490193
+clipping gradient: 21.2034624111 with coef 0.943242174897
+clipping gradient: 40.3148677889 with coef 0.496094892453
+clipping gradient: 24.1640046299 with coef 0.827677378245
+clipping gradient: 28.3501940176 with coef 0.705462544193
+Freezing BatchNorm2D except the first one.
+clipping gradient: 37.4229170228 with coef 0.534431882683
+Epoch: [3][0/16], lr: 0.00010	Time 2.743 (2.743)	Data 2.141 (2.141)	Loss 0.9084 (0.9084)	Prec@1 67.188 (67.188)	Prec@5 98.438 (98.438)
+clipping gradient: 31.8599062907 with coef 0.627748236844
+clipping gradient: 30.8001432897 with coef 0.649347628415
+clipping gradient: 27.5173078536 with coef 0.726815286816
+clipping gradient: 33.3768345163 with coef 0.599217999245
+clipping gradient: 24.0946549392 with coef 0.8300596149
+clipping gradient: 33.7740021476 with coef 0.592171455209
+clipping gradient: 31.0781358179 with coef 0.643539243061
+clipping gradient: 74.7488388815 with coef 0.267562684575
+clipping gradient: 30.5826204746 with coef 0.653966196802
+clipping gradient: 29.5108943343 with coef 0.677715821604
+Epoch: [3][10/16], lr: 0.00010	Time 0.528 (0.752)	Data 0.000 (0.209)	Loss 0.7144 (0.6997)	Prec@1 71.875 (73.935)	Prec@5 98.438 (99.077)
+clipping gradient: 28.7380374684 with coef 0.695941746961
+clipping gradient: 37.0682854169 with coef 0.539544782691
+clipping gradient: 23.5191222025 with coef 0.850371873058
+clipping gradient: 29.2176616989 with coef 0.684517474604
+clipping gradient: 43.7963068642 with coef 0.45665950926
+Freezing BatchNorm2D except the first one.
+clipping gradient: 44.4707820878 with coef 0.449733489294
+Epoch: [4][0/16], lr: 0.00010	Time 2.696 (2.696)	Data 2.141 (2.141)	Loss 0.8068 (0.8068)	Prec@1 66.406 (66.406)	Prec@5 100.000 (100.000)
+clipping gradient: 29.0519672305 with coef 0.688421539283
+clipping gradient: 30.1347941519 with coef 0.663684639728
+clipping gradient: 34.7412951835 with coef 0.575683776163
+clipping gradient: 43.1246867564 with coef 0.463771484601
+clipping gradient: 62.4805180657 with coef 0.320099778606
+clipping gradient: 52.4407545985 with coef 0.381382765239
+clipping gradient: 32.8331861896 with coef 0.609139785718
+clipping gradient: 34.7685431169 with coef 0.575232615664
+clipping gradient: 29.2927822603 with coef 0.68276204774
+clipping gradient: 28.7161533021 with coef 0.696472114129
+Epoch: [4][10/16], lr: 0.00010	Time 0.528 (0.752)	Data 0.000 (0.210)	Loss 0.6576 (0.7149)	Prec@1 71.875 (74.645)	Prec@5 99.219 (99.148)
+clipping gradient: 24.6854409394 with coef 0.810194156511
+clipping gradient: 26.0338054957 with coef 0.76823190537
+clipping gradient: 30.6891691783 with coef 0.651695713358
+clipping gradient: 50.7626464271 with coef 0.393990491192
+Freezing BatchNorm2D except the first one.
+Test: [0/2]	Time 2.068 (2.068)	Loss 0.6311 (0.6311)	Prec@1 81.250 (81.250)	Prec@5 99.219 (99.219)
+Testing Results: Prec@1 81.778 Prec@5 99.556 Loss 0.55712
+Freezing BatchNorm2D except the first one.
+clipping gradient: 34.5559095704 with coef 0.578772205641
+Epoch: [5][0/16], lr: 0.00010	Time 3.386 (3.386)	Data 2.209 (2.209)	Loss 0.6813 (0.6813)	Prec@1 78.125 (78.125)	Prec@5 100.000 (100.000)
+clipping gradient: 26.7035045745 with coef 0.748965363111
+clipping gradient: 46.0965757054 with coef 0.433871707257
+clipping gradient: 24.3866946565 with coef 0.820119343016
+clipping gradient: 29.4859659675 with coef 0.678288783961
+clipping gradient: 34.07103975 with coef 0.587008795352
+clipping gradient: 24.6820139257 with coef 0.810306649216
+clipping gradient: 22.9733331351 with coef 0.870574586733
+Epoch: [5][10/16], lr: 0.00010	Time 0.545 (0.840)	Data 0.000 (0.201)	Loss 0.5893 (0.6047)	Prec@1 74.219 (78.196)	Prec@5 99.219 (99.645)
+clipping gradient: 31.7489431809 with coef 0.629942227874
+clipping gradient: 34.2817359949 with coef 0.583401027386
+Freezing BatchNorm2D except the first one.
+clipping gradient: 25.2324322663 with coef 0.792630682169
+Epoch: [6][0/16], lr: 0.00010	Time 2.681 (2.681)	Data 2.105 (2.105)	Loss 0.5085 (0.5085)	Prec@1 79.688 (79.688)	Prec@5 99.219 (99.219)
+clipping gradient: 31.8433880564 with coef 0.628073870927
+clipping gradient: 45.6613860372 with coef 0.438006852961
+clipping gradient: 21.2268261242 with coef 0.942203977315
+clipping gradient: 23.0645386898 with coef 0.867132018941
+clipping gradient: 38.0731853309 with coef 0.525304090692
+clipping gradient: 31.5205739113 with coef 0.634506213506
+clipping gradient: 25.9831526042 with coef 0.769729536084
+clipping gradient: 21.125450589 with coef 0.946725368804
+clipping gradient: 34.9191247129 with coef 0.572752042454
+clipping gradient: 21.6165827482 with coef 0.925215619552
+Epoch: [6][10/16], lr: 0.00010	Time 0.560 (0.752)	Data 0.000 (0.206)	Loss 0.4936 (0.5124)	Prec@1 80.469 (81.108)	Prec@5 99.219 (99.787)
+clipping gradient: 28.2121530583 with coef 0.708914344774
+clipping gradient: 36.8683887396 with coef 0.542470139969
+clipping gradient: 29.4036555217 with coef 0.680187536045
+clipping gradient: 26.2990434093 with coef 0.76048393429
+Freezing BatchNorm2D except the first one.
+clipping gradient: 36.8857773518 with coef 0.542214409886
+Epoch: [7][0/16], lr: 0.00010	Time 2.728 (2.728)	Data 2.134 (2.134)	Loss 0.7119 (0.7119)	Prec@1 71.875 (71.875)	Prec@5 100.000 (100.000)
+clipping gradient: 28.0700682192 with coef 0.71250272154
+clipping gradient: 22.6451001471 with coef 0.883193267864
+clipping gradient: 22.8643190904 with coef 0.874725371042
+clipping gradient: 24.7851029879 with coef 0.806936328237
+clipping gradient: 35.5111545094 with coef 0.563203316714
+clipping gradient: 22.8124431768 with coef 0.876714512557
+Epoch: [7][10/16], lr: 0.00010	Time 0.546 (0.750)	Data 0.000 (0.204)	Loss 0.3978 (0.5274)	Prec@1 87.500 (81.747)	Prec@5 100.000 (99.787)
+clipping gradient: 26.9739796656 with coef 0.741455293137
+clipping gradient: 25.9232672051 with coef 0.771507690051
+clipping gradient: 25.9383532652 with coef 0.771058971843
+Freezing BatchNorm2D except the first one.
+Epoch: [8][0/16], lr: 0.00010	Time 2.736 (2.736)	Data 2.186 (2.186)	Loss 0.4029 (0.4029)	Prec@1 86.719 (86.719)	Prec@5 100.000 (100.000)
+clipping gradient: 23.8769695716 with coef 0.837627234899
+clipping gradient: 22.9402817693 with coef 0.871828872945
+clipping gradient: 33.9996222138 with coef 0.588241830284
+clipping gradient: 30.8725487938 with coef 0.647824710994
+clipping gradient: 26.8358884408 with coef 0.745270649195
+clipping gradient: 27.3075042638 with coef 0.732399409583
+clipping gradient: 24.2887366969 with coef 0.823426934452
+clipping gradient: 33.29824834 with coef 0.600632195297
+Epoch: [8][10/16], lr: 0.00010	Time 0.531 (0.758)	Data 0.000 (0.214)	Loss 0.4709 (0.4654)	Prec@1 80.469 (82.670)	Prec@5 100.000 (99.858)
+clipping gradient: 32.3527375951 with coef 0.618185708126
+clipping gradient: 20.7607553186 with coef 0.96335608667
+clipping gradient: 21.4333336052 with coef 0.933125960172
+clipping gradient: 25.8428660926 with coef 0.773907968579
+clipping gradient: 20.4444714496 with coef 0.978259577379
+Freezing BatchNorm2D except the first one.
+Epoch: [9][0/16], lr: 0.00010	Time 2.716 (2.716)	Data 2.138 (2.138)	Loss 0.3802 (0.3802)	Prec@1 82.812 (82.812)	Prec@5 100.000 (100.000)
+clipping gradient: 20.7042100995 with coef 0.965987106193
+clipping gradient: 29.0445124857 with coef 0.688598233827
+clipping gradient: 22.1806058418 with coef 0.90168862576
+clipping gradient: 26.8730394816 with coef 0.744240338488
+clipping gradient: 26.7331427964 with coef 0.748135008006
+clipping gradient: 21.7787398073 with coef 0.918326780012
+clipping gradient: 33.7383219364 with coef 0.5927977105
+Epoch: [9][10/16], lr: 0.00010	Time 0.564 (0.755)	Data 0.000 (0.203)	Loss 0.5860 (0.4318)	Prec@1 83.594 (84.304)	Prec@5 100.000 (99.787)
+clipping gradient: 34.5212604842 with coef 0.579353120931
+clipping gradient: 26.6532671222 with coef 0.750377051651
+Freezing BatchNorm2D except the first one.
+Test: [0/2]	Time 2.101 (2.101)	Loss 0.5558 (0.5558)	Prec@1 79.688 (79.688)	Prec@5 99.219 (99.219)
+Testing Results: Prec@1 84.000 Prec@5 99.556 Loss 0.50201
+Freezing BatchNorm2D except the first one.
+Epoch: [10][0/16], lr: 0.00010	Time 2.522 (2.522)	Data 1.961 (1.961)	Loss 0.3867 (0.3867)	Prec@1 83.594 (83.594)	Prec@5 100.000 (100.000)
+clipping gradient: 24.3493222907 with coef 0.821378096738
+clipping gradient: 20.3065578184 with coef 0.984903506486
+clipping gradient: 21.0700019744 with coef 0.949216807111
+clipping gradient: 31.7001531451 with coef 0.630911778516
+clipping gradient: 33.6564505554 with coef 0.594239727302
+Epoch: [10][10/16], lr: 0.00010	Time 0.532 (0.733)	Data 0.000 (0.195)	Loss 0.4738 (0.4027)	Prec@1 84.375 (85.298)	Prec@5 100.000 (100.000)
+clipping gradient: 57.0913017847 with coef 0.350316061726
+clipping gradient: 29.9664532941 with coef 0.66741298357
+clipping gradient: 29.7910096417 with coef 0.671343477128
+clipping gradient: 25.6363105376 with coef 0.780143459826
+clipping gradient: 36.8369638905 with coef 0.542932909982
+Freezing BatchNorm2D except the first one.
+clipping gradient: 21.1037129395 with coef 0.947700532952
+Epoch: [11][0/16], lr: 0.00010	Time 2.642 (2.642)	Data 2.085 (2.085)	Loss 0.5055 (0.5055)	Prec@1 81.250 (81.250)	Prec@5 97.656 (97.656)
+clipping gradient: 23.4920922624 with coef 0.851350308718
+clipping gradient: 23.9022975756 with coef 0.836739645499
+clipping gradient: 26.1655546274 with coef 0.764363694362
+Epoch: [11][10/16], lr: 0.00010	Time 0.530 (0.738)	Data 0.000 (0.200)	Loss 0.3971 (0.4165)	Prec@1 83.594 (84.517)	Prec@5 100.000 (99.645)
+clipping gradient: 23.9039260631 with coef 0.836682641471
+clipping gradient: 20.8041575282 with coef 0.961346306522
+clipping gradient: 22.5791680369 with coef 0.885772228953
+Freezing BatchNorm2D except the first one.
+clipping gradient: 30.5531368338 with coef 0.654597271264
+Epoch: [12][0/16], lr: 0.00010	Time 2.778 (2.778)	Data 2.199 (2.199)	Loss 0.5133 (0.5133)	Prec@1 82.812 (82.812)	Prec@5 99.219 (99.219)
+clipping gradient: 28.137147953 with coef 0.710804095475
+clipping gradient: 20.7462962786 with coef 0.964027493457
+clipping gradient: 20.8128993611 with coef 0.960942521897
+clipping gradient: 23.8389246965 with coef 0.838964015979
+clipping gradient: 25.9954190196 with coef 0.769366325078
+clipping gradient: 20.4346599887 with coef 0.978729277173
+clipping gradient: 25.0731249925 with coef 0.797666824776
+Epoch: [12][10/16], lr: 0.00010	Time 0.532 (0.760)	Data 0.000 (0.211)	Loss 0.4252 (0.4126)	Prec@1 85.938 (84.446)	Prec@5 100.000 (99.858)
+clipping gradient: 31.0638872271 with coef 0.64383442593
+clipping gradient: 24.1919007584 with coef 0.826722968141
+clipping gradient: 23.3196409617 with coef 0.857646137555
+clipping gradient: 21.3916893562 with coef 0.934942522162
+Freezing BatchNorm2D except the first one.
+Epoch: [13][0/16], lr: 0.00010	Time 2.761 (2.761)	Data 2.171 (2.171)	Loss 0.3299 (0.3299)	Prec@1 92.188 (92.188)	Prec@5 99.219 (99.219)
+clipping gradient: 20.7448376102 with coef 0.964095278827
+clipping gradient: 24.4344003308 with coef 0.818518143651
+clipping gradient: 22.2329471905 with coef 0.899565848317
+Epoch: [13][10/16], lr: 0.00010	Time 0.531 (0.770)	Data 0.000 (0.222)	Loss 0.3086 (0.3705)	Prec@1 89.844 (86.932)	Prec@5 99.219 (99.787)
+clipping gradient: 21.3310839208 with coef 0.937598861561
+clipping gradient: 33.885097908 with coef 0.590229960507
+clipping gradient: 20.1805801892 with coef 0.991051784064
+Freezing BatchNorm2D except the first one.
+Epoch: [14][0/16], lr: 0.00010	Time 2.761 (2.761)	Data 2.212 (2.212)	Loss 0.2633 (0.2633)	Prec@1 89.062 (89.062)	Prec@5 100.000 (100.000)
+clipping gradient: 26.3601664125 with coef 0.75872055157
+clipping gradient: 29.189137188 with coef 0.68518640586
+clipping gradient: 23.774924667 with coef 0.841222434145
+clipping gradient: 27.7522181913 with coef 0.720663114642
+Epoch: [14][10/16], lr: 0.00010	Time 0.531 (0.754)	Data 0.000 (0.212)	Loss 0.3334 (0.3755)	Prec@1 90.625 (86.080)	Prec@5 99.219 (99.858)
+clipping gradient: 33.8635776704 with coef 0.590605050496
+Freezing BatchNorm2D except the first one.
+Test: [0/2]	Time 2.059 (2.059)	Loss 0.4635 (0.4635)	Prec@1 84.375 (84.375)	Prec@5 99.219 (99.219)
+Testing Results: Prec@1 84.889 Prec@5 99.556 Loss 0.43264
+Freezing BatchNorm2D except the first one.
+Epoch: [15][0/16], lr: 0.00010	Time 2.678 (2.678)	Data 2.118 (2.118)	Loss 0.3096 (0.3096)	Prec@1 89.844 (89.844)	Prec@5 100.000 (100.000)
+clipping gradient: 21.8197313555 with coef 0.916601569199
+clipping gradient: 22.4530389255 with coef 0.890748021521
+clipping gradient: 22.9803399925 with coef 0.870309142796
+clipping gradient: 21.2849586694 with coef 0.939630671152
+Epoch: [15][10/16], lr: 0.00010	Time 0.531 (0.747)	Data 0.000 (0.203)	Loss 0.2896 (0.3136)	Prec@1 89.844 (87.500)	Prec@5 100.000 (100.000)
+clipping gradient: 21.9793997282 with coef 0.90994295783
+clipping gradient: 26.3550398707 with coef 0.758868136724
+Freezing BatchNorm2D except the first one.
+Epoch: [16][0/16], lr: 0.00010	Time 2.801 (2.801)	Data 2.249 (2.249)	Loss 0.2828 (0.2828)	Prec@1 89.062 (89.062)	Prec@5 100.000 (100.000)
+clipping gradient: 27.7977642106 with coef 0.719482324136
+clipping gradient: 23.3428062039 with coef 0.856795015358
+clipping gradient: 20.0325358779 with coef 0.998375848263
+Epoch: [16][10/16], lr: 0.00010	Time 0.533 (0.762)	Data 0.000 (0.216)	Loss 0.3592 (0.3641)	Prec@1 85.938 (87.713)	Prec@5 100.000 (99.787)
+clipping gradient: 21.8751943621 with coef 0.914277590816
+clipping gradient: 21.68171523 with coef 0.922436245834
+Freezing BatchNorm2D except the first one.
+Epoch: [17][0/16], lr: 0.00010	Time 2.751 (2.751)	Data 2.203 (2.203)	Loss 0.3584 (0.3584)	Prec@1 86.719 (86.719)	Prec@5 100.000 (100.000)
+clipping gradient: 20.6679352168 with coef 0.967682537718
+clipping gradient: 21.3177197589 with coef 0.938186645953
+clipping gradient: 24.2307925034 with coef 0.82539603264
+clipping gradient: 27.4707647249 with coef 0.728046714399
+Epoch: [17][10/16], lr: 0.00010	Time 0.532 (0.761)	Data 0.000 (0.220)	Loss 0.3167 (0.3593)	Prec@1 89.844 (86.435)	Prec@5 100.000 (99.929)
+clipping gradient: 21.7561159956 with coef 0.919281732276
+clipping gradient: 21.4622085199 with coef 0.931870547312
+clipping gradient: 24.2379199843 with coef 0.82515331402
+Freezing BatchNorm2D except the first one.
+Epoch: [18][0/16], lr: 0.00010	Time 2.751 (2.751)	Data 2.193 (2.193)	Loss 0.3180 (0.3180)	Prec@1 86.719 (86.719)	Prec@5 100.000 (100.000)
+clipping gradient: 20.9770956959 with coef 0.953420830509
+clipping gradient: 22.4219664039 with coef 0.891982426506
+clipping gradient: 21.5003944884 with coef 0.930215490269
+Epoch: [18][10/16], lr: 0.00010	Time 0.532 (0.760)	Data 0.000 (0.215)	Loss 0.4279 (0.3702)	Prec@1 85.938 (86.719)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [19][0/16], lr: 0.00010	Time 2.679 (2.679)	Data 2.120 (2.120)	Loss 0.3403 (0.3403)	Prec@1 86.719 (86.719)	Prec@5 100.000 (100.000)
+clipping gradient: 23.6455381878 with coef 0.845825535507
+Epoch: [19][10/16], lr: 0.00010	Time 0.533 (0.743)	Data 0.000 (0.204)	Loss 0.3335 (0.3268)	Prec@1 87.500 (88.494)	Prec@5 100.000 (100.000)
+clipping gradient: 20.5816291944 with coef 0.971740371529
+Freezing BatchNorm2D except the first one.
+Test: [0/2]	Time 2.043 (2.043)	Loss 0.5782 (0.5782)	Prec@1 84.375 (84.375)	Prec@5 99.219 (99.219)
+Testing Results: Prec@1 85.333 Prec@5 99.556 Loss 0.50841
+Freezing BatchNorm2D except the first one.
+Epoch: [20][0/16], lr: 0.00010	Time 2.559 (2.559)	Data 1.999 (1.999)	Loss 0.2762 (0.2762)	Prec@1 87.500 (87.500)	Prec@5 100.000 (100.000)
+clipping gradient: 20.5848807711 with coef 0.971586875938
+Epoch: [20][10/16], lr: 0.00010	Time 0.562 (0.740)	Data 0.000 (0.194)	Loss 0.2451 (0.3048)	Prec@1 91.406 (88.991)	Prec@5 100.000 (99.929)
+Freezing BatchNorm2D except the first one.
+Epoch: [21][0/16], lr: 0.00010	Time 2.758 (2.758)	Data 2.147 (2.147)	Loss 0.1533 (0.1533)	Prec@1 93.750 (93.750)	Prec@5 100.000 (100.000)
+Epoch: [21][10/16], lr: 0.00010	Time 0.537 (0.759)	Data 0.000 (0.211)	Loss 0.2004 (0.2412)	Prec@1 91.406 (90.696)	Prec@5 100.000 (100.000)
+clipping gradient: 25.3508507267 with coef 0.788928159281
+clipping gradient: 23.6834600461 with coef 0.844471203156
+Freezing BatchNorm2D except the first one.
+Epoch: [22][0/16], lr: 0.00010	Time 2.741 (2.741)	Data 2.181 (2.181)	Loss 0.2915 (0.2915)	Prec@1 90.625 (90.625)	Prec@5 100.000 (100.000)
+clipping gradient: 23.9501463386 with coef 0.835067966484
+clipping gradient: 23.9765923368 with coef 0.834146892898
+clipping gradient: 26.4043836077 with coef 0.757449986226
+Epoch: [22][10/16], lr: 0.00010	Time 0.532 (0.760)	Data 0.000 (0.214)	Loss 0.3168 (0.3021)	Prec@1 89.062 (88.352)	Prec@5 99.219 (99.787)
+clipping gradient: 20.8549687925 with coef 0.959004072314
+Freezing BatchNorm2D except the first one.
+Epoch: [23][0/16], lr: 0.00010	Time 2.777 (2.777)	Data 2.225 (2.225)	Loss 0.2567 (0.2567)	Prec@1 87.500 (87.500)	Prec@5 100.000 (100.000)
+clipping gradient: 26.3504577166 with coef 0.759000098409
+Epoch: [23][10/16], lr: 0.00010	Time 0.576 (0.772)	Data 0.000 (0.227)	Loss 0.2678 (0.2783)	Prec@1 92.969 (89.489)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [24][0/16], lr: 0.00010	Time 2.729 (2.729)	Data 2.111 (2.111)	Loss 0.3307 (0.3307)	Prec@1 89.062 (89.062)	Prec@5 100.000 (100.000)
+clipping gradient: 22.1829834844 with coef 0.901591979908
+clipping gradient: 20.0295773094 with coef 0.998523318345
+clipping gradient: 21.9016739497 with coef 0.913172209849
+Epoch: [24][10/16], lr: 0.00010	Time 0.532 (0.761)	Data 0.000 (0.212)	Loss 0.3235 (0.2994)	Prec@1 86.719 (88.707)	Prec@5 100.000 (99.929)
+Freezing BatchNorm2D except the first one.
+Test: [0/2]	Time 2.114 (2.114)	Loss 0.5917 (0.5917)	Prec@1 84.375 (84.375)	Prec@5 100.000 (100.000)
+Testing Results: Prec@1 85.333 Prec@5 100.000 Loss 0.51018
+Freezing BatchNorm2D except the first one.
+Epoch: [25][0/16], lr: 0.00010	Time 2.765 (2.765)	Data 2.156 (2.156)	Loss 0.2889 (0.2889)	Prec@1 89.062 (89.062)	Prec@5 100.000 (100.000)
+Epoch: [25][10/16], lr: 0.00010	Time 0.534 (0.759)	Data 0.000 (0.212)	Loss 0.2518 (0.2665)	Prec@1 89.062 (89.986)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [26][0/16], lr: 0.00010	Time 2.745 (2.745)	Data 2.186 (2.186)	Loss 0.2330 (0.2330)	Prec@1 89.844 (89.844)	Prec@5 100.000 (100.000)
+clipping gradient: 32.4562896695 with coef 0.616213381248
+clipping gradient: 20.0656478651 with coef 0.9967283456
+Epoch: [26][10/16], lr: 0.00010	Time 0.534 (0.759)	Data 0.000 (0.210)	Loss 0.3027 (0.2927)	Prec@1 89.844 (88.778)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [27][0/16], lr: 0.00010	Time 2.753 (2.753)	Data 2.159 (2.159)	Loss 0.2085 (0.2085)	Prec@1 92.188 (92.188)	Prec@5 100.000 (100.000)
+Epoch: [27][10/16], lr: 0.00010	Time 0.535 (0.759)	Data 0.000 (0.216)	Loss 0.1739 (0.2438)	Prec@1 92.969 (90.270)	Prec@5 100.000 (99.929)
+Freezing BatchNorm2D except the first one.
+Epoch: [28][0/16], lr: 0.00010	Time 2.738 (2.738)	Data 2.192 (2.192)	Loss 0.2740 (0.2740)	Prec@1 85.938 (85.938)	Prec@5 100.000 (100.000)
+clipping gradient: 25.6458017297 with coef 0.77985473844
+Epoch: [28][10/16], lr: 0.00010	Time 0.535 (0.755)	Data 0.000 (0.215)	Loss 0.2298 (0.2450)	Prec@1 92.188 (91.051)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [29][0/16], lr: 0.00010	Time 2.676 (2.676)	Data 2.115 (2.115)	Loss 0.2191 (0.2191)	Prec@1 92.188 (92.188)	Prec@5 100.000 (100.000)
+Epoch: [29][10/16], lr: 0.00010	Time 0.535 (0.767)	Data 0.000 (0.226)	Loss 0.2140 (0.2512)	Prec@1 90.625 (90.767)	Prec@5 100.000 (100.000)
+clipping gradient: 32.7403060491 with coef 0.610867838866
+Freezing BatchNorm2D except the first one.
+Test: [0/2]	Time 2.124 (2.124)	Loss 0.5703 (0.5703)	Prec@1 85.938 (85.938)	Prec@5 99.219 (99.219)
+Testing Results: Prec@1 86.667 Prec@5 99.111 Loss 0.53238
+Freezing BatchNorm2D except the first one.
+Epoch: [30][0/16], lr: 0.00001	Time 2.574 (2.574)	Data 2.014 (2.014)	Loss 0.2810 (0.2810)	Prec@1 89.062 (89.062)	Prec@5 100.000 (100.000)
+Epoch: [30][10/16], lr: 0.00001	Time 0.534 (0.744)	Data 0.000 (0.194)	Loss 0.1743 (0.2368)	Prec@1 94.531 (90.909)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [31][0/16], lr: 0.00001	Time 2.689 (2.689)	Data 2.125 (2.125)	Loss 0.1797 (0.1797)	Prec@1 91.406 (91.406)	Prec@5 100.000 (100.000)
+Epoch: [31][10/16], lr: 0.00001	Time 0.539 (0.749)	Data 0.000 (0.204)	Loss 0.1207 (0.2031)	Prec@1 94.531 (91.406)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [32][0/16], lr: 0.00001	Time 2.771 (2.771)	Data 2.208 (2.208)	Loss 0.1543 (0.1543)	Prec@1 93.750 (93.750)	Prec@5 100.000 (100.000)
+Epoch: [32][10/16], lr: 0.00001	Time 0.537 (0.769)	Data 0.000 (0.222)	Loss 0.1885 (0.1859)	Prec@1 93.750 (93.466)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [33][0/16], lr: 0.00001	Time 2.688 (2.688)	Data 2.112 (2.112)	Loss 0.1399 (0.1399)	Prec@1 92.969 (92.969)	Prec@5 100.000 (100.000)
+Epoch: [33][10/16], lr: 0.00001	Time 0.544 (0.766)	Data 0.000 (0.213)	Loss 0.1957 (0.1861)	Prec@1 88.281 (92.188)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [34][0/16], lr: 0.00001	Time 2.662 (2.662)	Data 2.102 (2.102)	Loss 0.1869 (0.1869)	Prec@1 94.531 (94.531)	Prec@5 100.000 (100.000)
+Epoch: [34][10/16], lr: 0.00001	Time 0.540 (0.750)	Data 0.000 (0.202)	Loss 0.2164 (0.1677)	Prec@1 89.062 (93.537)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Test: [0/2]	Time 2.132 (2.132)	Loss 0.6703 (0.6703)	Prec@1 84.375 (84.375)	Prec@5 99.219 (99.219)
+Testing Results: Prec@1 86.667 Prec@5 99.556 Loss 0.57582
+Freezing BatchNorm2D except the first one.
+Epoch: [35][0/16], lr: 0.00001	Time 2.744 (2.744)	Data 2.184 (2.184)	Loss 0.1454 (0.1454)	Prec@1 95.312 (95.312)	Prec@5 100.000 (100.000)
+Epoch: [35][10/16], lr: 0.00001	Time 0.534 (0.762)	Data 0.000 (0.218)	Loss 0.2141 (0.1632)	Prec@1 89.062 (93.608)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [36][0/16], lr: 0.00001	Time 2.729 (2.729)	Data 2.169 (2.169)	Loss 0.1732 (0.1732)	Prec@1 94.531 (94.531)	Prec@5 100.000 (100.000)
+Epoch: [36][10/16], lr: 0.00001	Time 0.538 (0.764)	Data 0.000 (0.223)	Loss 0.1955 (0.1595)	Prec@1 90.625 (93.963)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [37][0/16], lr: 0.00001	Time 2.854 (2.854)	Data 2.303 (2.303)	Loss 0.1906 (0.1906)	Prec@1 92.188 (92.188)	Prec@5 100.000 (100.000)
+clipping gradient: 21.2724671173 with coef 0.940182438157
+Epoch: [37][10/16], lr: 0.00001	Time 0.538 (0.763)	Data 0.000 (0.221)	Loss 0.2880 (0.1831)	Prec@1 87.500 (92.614)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [38][0/16], lr: 0.00001	Time 2.723 (2.723)	Data 2.161 (2.161)	Loss 0.1133 (0.1133)	Prec@1 96.875 (96.875)	Prec@5 100.000 (100.000)
+Epoch: [38][10/16], lr: 0.00001	Time 0.545 (0.768)	Data 0.000 (0.216)	Loss 0.1131 (0.1623)	Prec@1 96.094 (93.537)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [39][0/16], lr: 0.00001	Time 2.781 (2.781)	Data 2.230 (2.230)	Loss 0.1181 (0.1181)	Prec@1 94.531 (94.531)	Prec@5 100.000 (100.000)
+Epoch: [39][10/16], lr: 0.00001	Time 0.543 (0.765)	Data 0.000 (0.213)	Loss 0.1120 (0.1437)	Prec@1 94.531 (94.105)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Test: [0/2]	Time 2.109 (2.109)	Loss 0.7527 (0.7527)	Prec@1 83.594 (83.594)	Prec@5 99.219 (99.219)
+Testing Results: Prec@1 86.222 Prec@5 99.556 Loss 0.63939
+Freezing BatchNorm2D except the first one.
+Epoch: [40][0/16], lr: 0.00001	Time 2.672 (2.672)	Data 2.113 (2.113)	Loss 0.1407 (0.1407)	Prec@1 95.312 (95.312)	Prec@5 100.000 (100.000)
+Epoch: [40][10/16], lr: 0.00001	Time 0.540 (0.751)	Data 0.000 (0.202)	Loss 0.1227 (0.1457)	Prec@1 96.094 (93.750)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [41][0/16], lr: 0.00001	Time 2.786 (2.786)	Data 2.238 (2.238)	Loss 0.1692 (0.1692)	Prec@1 92.188 (92.188)	Prec@5 100.000 (100.000)
+Epoch: [41][10/16], lr: 0.00001	Time 0.584 (0.768)	Data 0.000 (0.214)	Loss 0.0939 (0.1549)	Prec@1 96.875 (93.324)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [42][0/16], lr: 0.00001	Time 2.804 (2.804)	Data 2.190 (2.190)	Loss 0.1165 (0.1165)	Prec@1 95.312 (95.312)	Prec@5 100.000 (100.000)
+Epoch: [42][10/16], lr: 0.00001	Time 0.536 (0.778)	Data 0.000 (0.229)	Loss 0.0692 (0.1421)	Prec@1 97.656 (94.673)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [43][0/16], lr: 0.00001	Time 2.654 (2.654)	Data 2.095 (2.095)	Loss 0.1207 (0.1207)	Prec@1 96.094 (96.094)	Prec@5 100.000 (100.000)
+Epoch: [43][10/16], lr: 0.00001	Time 0.542 (0.753)	Data 0.000 (0.201)	Loss 0.1256 (0.1477)	Prec@1 94.531 (94.247)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [44][0/16], lr: 0.00001	Time 2.688 (2.688)	Data 2.106 (2.106)	Loss 0.1488 (0.1488)	Prec@1 92.188 (92.188)	Prec@5 100.000 (100.000)
+Epoch: [44][10/16], lr: 0.00001	Time 0.572 (0.764)	Data 0.000 (0.207)	Loss 0.1604 (0.1464)	Prec@1 92.969 (93.963)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Test: [0/2]	Time 2.173 (2.173)	Loss 0.7868 (0.7868)	Prec@1 83.594 (83.594)	Prec@5 99.219 (99.219)
+Testing Results: Prec@1 86.222 Prec@5 99.556 Loss 0.65450
+Freezing BatchNorm2D except the first one.
+Epoch: [45][0/16], lr: 0.00001	Time 2.746 (2.746)	Data 2.195 (2.195)	Loss 0.0869 (0.0869)	Prec@1 96.875 (96.875)	Prec@5 100.000 (100.000)
+Epoch: [45][10/16], lr: 0.00001	Time 0.545 (0.755)	Data 0.000 (0.210)	Loss 0.1547 (0.1463)	Prec@1 95.312 (94.602)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [46][0/16], lr: 0.00001	Time 2.865 (2.865)	Data 2.296 (2.296)	Loss 0.1970 (0.1970)	Prec@1 89.844 (89.844)	Prec@5 100.000 (100.000)
+Epoch: [46][10/16], lr: 0.00001	Time 0.554 (0.773)	Data 0.000 (0.225)	Loss 0.1325 (0.1430)	Prec@1 92.969 (93.892)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [47][0/16], lr: 0.00001	Time 2.689 (2.689)	Data 2.127 (2.127)	Loss 0.1462 (0.1462)	Prec@1 91.406 (91.406)	Prec@5 100.000 (100.000)
+Epoch: [47][10/16], lr: 0.00001	Time 0.544 (0.761)	Data 0.000 (0.204)	Loss 0.1351 (0.1482)	Prec@1 95.312 (93.892)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [48][0/16], lr: 0.00001	Time 2.761 (2.761)	Data 2.211 (2.211)	Loss 0.1149 (0.1149)	Prec@1 93.750 (93.750)	Prec@5 100.000 (100.000)
+Epoch: [48][10/16], lr: 0.00001	Time 0.545 (0.767)	Data 0.000 (0.218)	Loss 0.1451 (0.1413)	Prec@1 93.750 (93.750)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [49][0/16], lr: 0.00001	Time 2.762 (2.762)	Data 2.209 (2.209)	Loss 0.1378 (0.1378)	Prec@1 93.750 (93.750)	Prec@5 100.000 (100.000)
+Epoch: [49][10/16], lr: 0.00001	Time 0.553 (0.770)	Data 0.000 (0.212)	Loss 0.1228 (0.1511)	Prec@1 94.531 (93.963)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Test: [0/2]	Time 2.131 (2.131)	Loss 0.7369 (0.7369)	Prec@1 87.500 (87.500)	Prec@5 99.219 (99.219)
+Testing Results: Prec@1 88.889 Prec@5 99.556 Loss 0.62320
+Freezing BatchNorm2D except the first one.
+Epoch: [50][0/16], lr: 0.00001	Time 2.586 (2.586)	Data 2.028 (2.028)	Loss 0.1870 (0.1870)	Prec@1 93.750 (93.750)	Prec@5 100.000 (100.000)
+Epoch: [50][10/16], lr: 0.00001	Time 0.543 (0.748)	Data 0.000 (0.194)	Loss 0.1173 (0.1559)	Prec@1 94.531 (93.963)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [51][0/16], lr: 0.00001	Time 2.726 (2.726)	Data 2.164 (2.164)	Loss 0.0989 (0.0989)	Prec@1 96.094 (96.094)	Prec@5 100.000 (100.000)
+Epoch: [51][10/16], lr: 0.00001	Time 0.541 (0.768)	Data 0.000 (0.211)	Loss 0.1152 (0.1229)	Prec@1 95.312 (95.028)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [52][0/16], lr: 0.00001	Time 2.824 (2.824)	Data 2.262 (2.262)	Loss 0.1476 (0.1476)	Prec@1 96.094 (96.094)	Prec@5 100.000 (100.000)
+Epoch: [52][10/16], lr: 0.00001	Time 0.557 (0.777)	Data 0.000 (0.226)	Loss 0.1168 (0.1411)	Prec@1 93.750 (93.821)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [53][0/16], lr: 0.00001	Time 2.823 (2.823)	Data 2.265 (2.265)	Loss 0.1935 (0.1935)	Prec@1 92.188 (92.188)	Prec@5 100.000 (100.000)
+Epoch: [53][10/16], lr: 0.00001	Time 0.553 (0.774)	Data 0.000 (0.222)	Loss 0.1173 (0.1273)	Prec@1 94.531 (95.170)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [54][0/16], lr: 0.00001	Time 2.771 (2.771)	Data 2.215 (2.215)	Loss 0.1352 (0.1352)	Prec@1 94.531 (94.531)	Prec@5 100.000 (100.000)
+Epoch: [54][10/16], lr: 0.00001	Time 0.555 (0.762)	Data 0.000 (0.212)	Loss 0.0983 (0.1274)	Prec@1 96.094 (94.886)	Prec@5 100.000 (100.000)
+clipping gradient: 20.605497973 with coef 0.970614737203
+Freezing BatchNorm2D except the first one.
+Test: [0/2]	Time 2.144 (2.144)	Loss 0.7859 (0.7859)	Prec@1 87.500 (87.500)	Prec@5 99.219 (99.219)
+Testing Results: Prec@1 88.889 Prec@5 99.556 Loss 0.65460
+Freezing BatchNorm2D except the first one.
+Epoch: [55][0/16], lr: 0.00001	Time 2.723 (2.723)	Data 2.158 (2.158)	Loss 0.1084 (0.1084)	Prec@1 95.312 (95.312)	Prec@5 100.000 (100.000)
+Epoch: [55][10/16], lr: 0.00001	Time 0.574 (0.770)	Data 0.000 (0.217)	Loss 0.1504 (0.1305)	Prec@1 93.750 (94.673)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [56][0/16], lr: 0.00001	Time 2.838 (2.838)	Data 2.226 (2.226)	Loss 0.1453 (0.1453)	Prec@1 91.406 (91.406)	Prec@5 100.000 (100.000)
+Epoch: [56][10/16], lr: 0.00001	Time 0.550 (0.778)	Data 0.000 (0.223)	Loss 0.1310 (0.1392)	Prec@1 94.531 (93.963)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [57][0/16], lr: 0.00001	Time 2.778 (2.778)	Data 2.230 (2.230)	Loss 0.1226 (0.1226)	Prec@1 95.312 (95.312)	Prec@5 100.000 (100.000)
+Epoch: [57][10/16], lr: 0.00001	Time 0.551 (0.778)	Data 0.000 (0.222)	Loss 0.1050 (0.1387)	Prec@1 93.750 (93.821)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [58][0/16], lr: 0.00001	Time 2.796 (2.796)	Data 2.241 (2.241)	Loss 0.0994 (0.0994)	Prec@1 96.094 (96.094)	Prec@5 100.000 (100.000)
+Epoch: [58][10/16], lr: 0.00001	Time 0.577 (0.771)	Data 0.000 (0.219)	Loss 0.2087 (0.1388)	Prec@1 92.188 (94.247)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [59][0/16], lr: 0.00001	Time 2.831 (2.831)	Data 2.243 (2.243)	Loss 0.1122 (0.1122)	Prec@1 96.094 (96.094)	Prec@5 100.000 (100.000)
+Epoch: [59][10/16], lr: 0.00001	Time 0.558 (0.774)	Data 0.000 (0.221)	Loss 0.1417 (0.1282)	Prec@1 93.750 (94.815)	Prec@5 100.000 (100.000)
+clipping gradient: 21.8818026539 with coef 0.914001479511
+Freezing BatchNorm2D except the first one.
+Test: [0/2]	Time 2.158 (2.158)	Loss 0.8889 (0.8889)	Prec@1 86.719 (86.719)	Prec@5 99.219 (99.219)
+Testing Results: Prec@1 88.444 Prec@5 99.556 Loss 0.71872
+Freezing BatchNorm2D except the first one.
+Epoch: [60][0/16], lr: 0.00000	Time 2.822 (2.822)	Data 2.230 (2.230)	Loss 0.1222 (0.1222)	Prec@1 92.969 (92.969)	Prec@5 100.000 (100.000)
+Epoch: [60][10/16], lr: 0.00000	Time 0.553 (0.770)	Data 0.000 (0.218)	Loss 0.1566 (0.1208)	Prec@1 93.750 (94.673)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [61][0/16], lr: 0.00000	Time 2.728 (2.728)	Data 2.165 (2.165)	Loss 0.1613 (0.1613)	Prec@1 92.188 (92.188)	Prec@5 100.000 (100.000)
+Epoch: [61][10/16], lr: 0.00000	Time 0.539 (0.769)	Data 0.000 (0.216)	Loss 0.0819 (0.1284)	Prec@1 97.656 (94.460)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [62][0/16], lr: 0.00000	Time 2.807 (2.807)	Data 2.259 (2.259)	Loss 0.1630 (0.1630)	Prec@1 91.406 (91.406)	Prec@5 100.000 (100.000)
+Epoch: [62][10/16], lr: 0.00000	Time 0.541 (0.773)	Data 0.000 (0.227)	Loss 0.1616 (0.1380)	Prec@1 92.188 (93.892)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [63][0/16], lr: 0.00000	Time 2.788 (2.788)	Data 2.225 (2.225)	Loss 0.0952 (0.0952)	Prec@1 96.094 (96.094)	Prec@5 100.000 (100.000)
+Epoch: [63][10/16], lr: 0.00000	Time 0.540 (0.767)	Data 0.000 (0.219)	Loss 0.0849 (0.1260)	Prec@1 96.875 (94.531)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [64][0/16], lr: 0.00000	Time 2.787 (2.787)	Data 2.231 (2.231)	Loss 0.1487 (0.1487)	Prec@1 93.750 (93.750)	Prec@5 100.000 (100.000)
+Epoch: [64][10/16], lr: 0.00000	Time 0.541 (0.775)	Data 0.000 (0.223)	Loss 0.1214 (0.1337)	Prec@1 94.531 (94.602)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Test: [0/2]	Time 2.188 (2.188)	Loss 0.8597 (0.8597)	Prec@1 86.719 (86.719)	Prec@5 99.219 (99.219)
+Testing Results: Prec@1 88.444 Prec@5 99.556 Loss 0.70285
+Freezing BatchNorm2D except the first one.
+Epoch: [65][0/16], lr: 0.00000	Time 2.819 (2.819)	Data 2.266 (2.266)	Loss 0.1176 (0.1176)	Prec@1 94.531 (94.531)	Prec@5 100.000 (100.000)
+Epoch: [65][10/16], lr: 0.00000	Time 0.539 (0.779)	Data 0.000 (0.227)	Loss 0.0985 (0.1330)	Prec@1 96.875 (94.105)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [66][0/16], lr: 0.00000	Time 2.808 (2.808)	Data 2.255 (2.255)	Loss 0.1141 (0.1141)	Prec@1 96.094 (96.094)	Prec@5 100.000 (100.000)
+Epoch: [66][10/16], lr: 0.00000	Time 0.539 (0.777)	Data 0.000 (0.226)	Loss 0.0951 (0.1286)	Prec@1 95.312 (95.099)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [67][0/16], lr: 0.00000	Time 2.733 (2.733)	Data 2.163 (2.163)	Loss 0.1128 (0.1128)	Prec@1 96.875 (96.875)	Prec@5 100.000 (100.000)
+Epoch: [67][10/16], lr: 0.00000	Time 0.554 (0.771)	Data 0.000 (0.208)	Loss 0.0926 (0.1179)	Prec@1 96.875 (95.241)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [68][0/16], lr: 0.00000	Time 2.798 (2.798)	Data 2.246 (2.246)	Loss 0.0489 (0.0489)	Prec@1 98.438 (98.438)	Prec@5 100.000 (100.000)
+Epoch: [68][10/16], lr: 0.00000	Time 0.544 (0.776)	Data 0.000 (0.219)	Loss 0.1063 (0.1126)	Prec@1 96.094 (95.597)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [69][0/16], lr: 0.00000	Time 2.755 (2.755)	Data 2.203 (2.203)	Loss 0.0803 (0.0803)	Prec@1 96.875 (96.875)	Prec@5 100.000 (100.000)
+Epoch: [69][10/16], lr: 0.00000	Time 0.552 (0.770)	Data 0.000 (0.216)	Loss 0.1241 (0.1163)	Prec@1 96.094 (95.455)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Test: [0/2]	Time 2.125 (2.125)	Loss 0.8677 (0.8677)	Prec@1 85.938 (85.938)	Prec@5 99.219 (99.219)
+Testing Results: Prec@1 88.000 Prec@5 99.556 Loss 0.71121
+Freezing BatchNorm2D except the first one.
+Epoch: [70][0/16], lr: 0.00000	Time 2.780 (2.780)	Data 2.232 (2.232)	Loss 0.0948 (0.0948)	Prec@1 96.094 (96.094)	Prec@5 100.000 (100.000)
+Epoch: [70][10/16], lr: 0.00000	Time 0.544 (0.765)	Data 0.000 (0.219)	Loss 0.1022 (0.1274)	Prec@1 95.312 (94.744)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [71][0/16], lr: 0.00000	Time 2.833 (2.833)	Data 2.282 (2.282)	Loss 0.1614 (0.1614)	Prec@1 94.531 (94.531)	Prec@5 100.000 (100.000)
+Epoch: [71][10/16], lr: 0.00000	Time 0.545 (0.767)	Data 0.000 (0.218)	Loss 0.0931 (0.1210)	Prec@1 96.875 (95.526)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [72][0/16], lr: 0.00000	Time 2.714 (2.714)	Data 2.152 (2.152)	Loss 0.1440 (0.1440)	Prec@1 95.312 (95.312)	Prec@5 100.000 (100.000)
+Epoch: [72][10/16], lr: 0.00000	Time 0.546 (0.755)	Data 0.000 (0.206)	Loss 0.1196 (0.1300)	Prec@1 95.312 (94.602)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [73][0/16], lr: 0.00000	Time 2.739 (2.739)	Data 2.191 (2.191)	Loss 0.1479 (0.1479)	Prec@1 93.750 (93.750)	Prec@5 100.000 (100.000)
+Epoch: [73][10/16], lr: 0.00000	Time 0.540 (0.760)	Data 0.000 (0.210)	Loss 0.0622 (0.1156)	Prec@1 96.875 (95.668)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [74][0/16], lr: 0.00000	Time 2.722 (2.722)	Data 2.157 (2.157)	Loss 0.1032 (0.1032)	Prec@1 96.094 (96.094)	Prec@5 100.000 (100.000)
+Epoch: [74][10/16], lr: 0.00000	Time 0.541 (0.761)	Data 0.000 (0.207)	Loss 0.1198 (0.1248)	Prec@1 93.750 (94.602)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Test: [0/2]	Time 2.127 (2.127)	Loss 0.8602 (0.8602)	Prec@1 85.938 (85.938)	Prec@5 99.219 (99.219)
+Testing Results: Prec@1 88.000 Prec@5 99.556 Loss 0.70421
+Freezing BatchNorm2D except the first one.
+Epoch: [75][0/16], lr: 0.00000	Time 2.764 (2.764)	Data 2.203 (2.203)	Loss 0.1157 (0.1157)	Prec@1 96.094 (96.094)	Prec@5 100.000 (100.000)
+Epoch: [75][10/16], lr: 0.00000	Time 0.545 (0.766)	Data 0.000 (0.211)	Loss 0.1525 (0.1302)	Prec@1 95.312 (94.744)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [76][0/16], lr: 0.00000	Time 2.762 (2.762)	Data 2.209 (2.209)	Loss 0.1573 (0.1573)	Prec@1 92.969 (92.969)	Prec@5 100.000 (100.000)
+Epoch: [76][10/16], lr: 0.00000	Time 0.577 (0.768)	Data 0.000 (0.216)	Loss 0.1532 (0.1372)	Prec@1 93.750 (93.963)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [77][0/16], lr: 0.00000	Time 2.783 (2.783)	Data 2.171 (2.171)	Loss 0.1145 (0.1145)	Prec@1 95.312 (95.312)	Prec@5 100.000 (100.000)
+Epoch: [77][10/16], lr: 0.00000	Time 0.541 (0.762)	Data 0.000 (0.208)	Loss 0.0524 (0.1175)	Prec@1 97.656 (94.886)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [78][0/16], lr: 0.00000	Time 2.799 (2.799)	Data 2.242 (2.242)	Loss 0.1116 (0.1116)	Prec@1 96.094 (96.094)	Prec@5 100.000 (100.000)
+Epoch: [78][10/16], lr: 0.00000	Time 0.549 (0.776)	Data 0.000 (0.220)	Loss 0.1099 (0.1212)	Prec@1 94.531 (94.602)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Epoch: [79][0/16], lr: 0.00000	Time 16.457 (16.457)	Data 2.197 (2.197)	Loss 0.1170 (0.1170)	Prec@1 93.750 (93.750)	Prec@5 100.000 (100.000)
+Epoch: [79][10/16], lr: 0.00000	Time 15.598 (15.985)	Data 0.000 (0.200)	Loss 0.0997 (0.1274)	Prec@1 94.531 (94.602)	Prec@5 100.000 (100.000)
+Freezing BatchNorm2D except the first one.
+Test: [0/2]	Time 2.185 (2.185)	Loss 0.8819 (0.8819)	Prec@1 85.938 (85.938)	Prec@5 99.219 (99.219)
+Testing Results: Prec@1 88.000 Prec@5 99.556 Loss 0.72034
+
+Process finished with exit code 0
+
